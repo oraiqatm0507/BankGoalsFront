@@ -1,0 +1,208 @@
+.popup-content {
+    margin: auto;
+    background: rgb(255, 255, 255);
+    width: 60%;
+    border-radius: 10px;
+
+}
+
+
+.closeBtn {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    padding: 2px 5px;
+    line-height: 20px;
+    right: 5px;
+    top: 5px;
+    font-size: 24px;
+    background: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #cfcece;
+  
+}
+
+.editBtn{
+    border: none;
+    color: rgba(0, 0, 0, 1);
+    background-color: white;
+}
+
+.editBtn :hover{
+ 
+    width: 20px;
+    height: 20px;
+}
+
+
+.windowMain {
+    margin-bottom: 10px;
+    width: 100%;
+
+}
+
+
+.windowHeader {
+
+    width: 100%;
+    text-align: center;
+
+}
+
+.goalTitle {
+    font-size: 20px;
+    font-weight: 700;
+
+}
+
+.mainContainer {
+    width: auto;
+    display: flex;
+
+
+}
+
+.listContainer {
+    flex: 50%;
+    padding-left: 10px;
+}
+
+.Installments div {
+    margin-top: 5px;
+}
+
+.Installments input {
+    text-align: right;
+    width: 25%;
+    padding: 5px;
+}
+
+.Installments select {
+    margin-left: 5px;
+    padding: 5px;
+}
+
+.dataList {
+    list-style-type: none;
+    
+}
+
+.dataList li {
+
+    margin-top: 5px;
+}
+
+.duration ul {
+    list-style-type: none;
+}
+
+.calendar {
+    flex: 50%;
+    margin-top: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.progress {
+    display: flex;
+    height: 20%;
+    position: relative;
+    width: 100%;
+
+  
+}
+.progress :first-child{
+    
+    flex: 50%;
+}
+
+.textArea {
+    width: 80%;
+}
+
+.textArea .goalDescr {
+    width: 100%;
+    height: 50px;
+}
+
+.textArea p {
+    text-align: right;
+
+    font-size: 10px;
+}
+
+
+
+
+
+
+
+.estimatedDuration {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2px;
+    font-size: 12px;
+
+}
+
+.deleteBtn {
+
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    padding: 2px 5px;
+    line-height: 20px;
+    right: 5px;
+    bottom: 5px;
+    font-size: 24px;
+    background: #ffffff;
+    border-radius: 10px;
+
+    border: 1px solid #cfcece;
+}
+
+
+.saveBtn {
+    margin-top: 40px;
+    text-align: center;
+    width: 100%;
+    
+}
+
+
+/* CSS */
+.button-65 {
+    width: 50%;
+    background-color: #2f80ed;
+    border-radius: 10px;
+    border-style: none;
+    box-shadow: none;
+    color: #fff;
+    height: 30px;
+    cursor: pointer;
+    
+
+}
+
+.button-65:hover {
+    background-color: #1366d6;
+    box-shadow: rgba(0, 0, 0, .05) 0 5px 30px, rgba(0, 0, 0, .05) 0 1px 4px;
+    opacity: 1;
+    transform: translateY(0);
+    transition-duration: .35s;
+}
+
+.button-65:hover:after {
+    opacity: .5;
+}
+
+.button-65:active {
+    box-shadow: rgba(0, 0, 0, .1) 0 3px 6px 0, rgba(0, 0, 0, .1) 0 0 10px 0, rgba(0, 0, 0, .1) 0 1px 4px -1px;
+    transform: translateY(2px);
+    transition-duration: .35s;
+}
+
+.button-65:active:after {
+    opacity: 1;
+}
+
