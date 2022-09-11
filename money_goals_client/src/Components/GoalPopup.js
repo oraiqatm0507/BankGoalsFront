@@ -115,6 +115,18 @@ export default function GoalPopup({
     }
 
 
+    function tileClassName({ date, view }) {
+        let start = new Date(durationStart);
+        let end = new Date(durationEnd);
+        // Add class to tiles in month view only
+        if (view === 'month') {
+          // Check if a date React-Calendar wants to check is on the list of dates to add class to
+          if (date > start && date < end){
+            return 'durationDays'
+          }
+        }
+      }
+
     return (
         <div className='windowMain'>
             <button className="closeBtn" onClick={onClose}>
@@ -249,7 +261,7 @@ export default function GoalPopup({
                 </div>
 
                 <div className='calendar'>
-                    <Calendar value={currentDate} />
+                    <Calendar value={currentDate} tileClassName={tileClassName} />
                 </div>
             </div>
 

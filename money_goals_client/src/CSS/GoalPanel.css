@@ -1,0 +1,185 @@
+.GPM_mainContainer {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 70px;
+    padding-right: 40px;
+    padding-left: 40px;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 1px;
+    
+    width: 300px;
+    height: 400px;
+}
+.GPM_mainContainer text{
+    display: block;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.GPM_miniContainer {
+    background-color: lightblue;
+    border-radius: 20px;
+    padding-top: 5px;
+    padding-bottom:30px;
+    padding-right: 5px;
+    padding-left: 5px;
+    text-align: center;
+    display: block;
+}
+
+.GPM_miniContainer text{
+    display: block;
+    margin-bottom: 10px;
+    height: fit-content;
+    font-size: 18px;
+    
+}
+
+
+/* CSS */
+.createGoalBtn{
+  appearance: none;
+  backface-visibility: hidden;
+  background-color: #2f80ed;
+  border-radius: 20px;
+  border-style: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter,-apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  height: 50px;
+  letter-spacing: normal;
+  line-height: 1.5;
+  outline: none;
+  overflow: hidden;
+  padding: 14px 30px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transform: translate3d(0, 0, 0);
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.createGoalBtn:hover {
+  background-color: #1366d6;
+  box-shadow: rgba(0, 0, 0, .05) 0 5px 30px, rgba(0, 0, 0, .05) 0 1px 4px;
+  opacity: 1;
+  transform: translateY(0);
+  transition-duration: .35s;
+}
+
+.createGoalBtn:hover:after {
+  opacity: .5;
+}
+
+.createGoalBtn:active {
+  box-shadow: rgba(0, 0, 0, .1) 0 3px 6px 0, rgba(0, 0, 0, .1) 0 0 10px 0, rgba(0, 0, 0, .1) 0 1px 4px -1px;
+  transform: translateY(2px);
+  transition-duration: .35s;
+}
+
+.createGoalBtn:active:after {
+  opacity: 1;
+}
+
+
+/* ------------------------------------------GoalPanel.js CSS ------------------------------------------ */
+
+.GP_mainContainer {
+    
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 70px;
+    padding-right: 40px;
+    padding-left: 40px;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 1px;
+    width: 300px;
+    height: 400px;
+    position: relative;
+    
+}
+
+.GP_miniContainer{
+    background-color: lightblue;
+    border-radius: 20px;
+    padding-top: 5px;
+    padding-bottom:30px;
+    padding-right: 5px;
+    padding-left: 5px;
+    text-align: center;
+    display: block;
+    
+}
+.descrContainer {
+    width: 80%;
+    overflow-y: scroll;
+    overflow-x: scroll;
+   
+    
+}
+
+.GP_mainContainer text{
+    display: block;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.goalInfoBtn {
+
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    padding: 2px 5px;
+    line-height: 20px;
+    right: 5px;
+    bottom: 5px;
+    font-size: 24px;
+    background: #ffffff;
+    border-radius: 10px;
+
+    border: 1px solid #cfcece;
+}
+
+.goalInfo{
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    border-style: none;
+    background-color: white;
+    border-radius: 50px;
+    float: right;
+    right: 5px;
+    bottom: 5px;
+
+}
+
+/* ------------------------------------------GoalPanel.js CSS ------------------------------------------ */
+.GPE_mainContainer{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 70px;
+    padding-right: 40px;
+    padding-left: 40px;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 1px;
+    width: 300px;
+    height: 400px;
+    position: relative;
+    background-color: rgba(110, 110, 110, 0.168);
+
+}
