@@ -10,6 +10,7 @@ import Login from './Pages/Login';
 import NavBar from './Components/NavBar';
 import CreateAccount from './Pages/CreateAccount';
 
+
 function App() {
   return (
     <Router>
@@ -19,6 +20,8 @@ function App() {
       <Route path="/SignIn" element={<Login />} />
       <Route path="/MoneyGoals" element={<MoneyGoalsHome />} />
       <Route path="/CreateAccount" element={<CreateAccount />} />
+      <Route path="/Trigger" element={<TempPage />} />
+
     </Routes>
   </Router>
  

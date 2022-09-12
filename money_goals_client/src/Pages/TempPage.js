@@ -17,13 +17,13 @@ const GET_GOALS_BY_OWNER = gql`
 
 
 export default function TempPage() {
-    const { loading, error, data } = useQuery(GET_GOALS_BY_OWNER, {"no-cors": true, variables:{ value: "091823812-1298312" } }) ;
+    // const { loading, error, data } = useQuery(GET_GOALS_BY_OWNER, {"no-cors": true, variables:{ value: "091823812-1298312" } }) ;
 
-    if (loading) return <p>Loading...</p>;
+    // if (loading) return <p>Loading...</p>;
     
-    if (error) return <p>Error : {error.message}</p>;
+    // if (error) return <p>Error : {error.message}</p>;
    
-    console.log(data);
+    // console.log(data);
     return (
 
         <Popup trigger={<button> Trigger</button>}

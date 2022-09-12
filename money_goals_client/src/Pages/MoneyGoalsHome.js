@@ -39,6 +39,14 @@ export default function MoneyGoalsHome() {
         <GoalPanel/>
         <GoalPanel_Main/>
         <GoalPanel_Empty/>
+        <GoalPanel_Empty/>
+
+        <GoalPanel_Empty/>
+        <GoalPanel_Empty/>
+        <GoalPanel_Empty/>
+        <GoalPanel_Empty/>
+        <GoalPanel_Empty/>
+
       </Carousel>
 
       <GoalCalendar/>
