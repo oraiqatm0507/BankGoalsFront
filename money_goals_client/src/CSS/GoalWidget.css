@@ -1,0 +1,39 @@
+.widgetMain {
+    margin-left: 100px;
+    margin-right: 100px;
+    line-height: 1;
+    text-align: center;
+}
+
+.timeRemaining {
+    font-size: 12px;
+}
+
+.goalTitle {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.goalDescription{
+    margin: 20px;
+    font-size: 15px;
+}
+
+.installments{
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
+.t_amountSaved{
+    font-size: 15px;
+}
+
+.g_amountSaved{
+    margin-top: 0px;
+    font-size: 25px;
+}
+
+.endDate{
+    font-size: 12px;
+}

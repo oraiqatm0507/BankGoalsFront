@@ -6,6 +6,7 @@ import '../CSS/MoneyGoalHome.css'
 import GoalPanel_Main from '../Components/GoalPanel_Main'
 import GoalPanel from '../Components/GoalPanel'
 import GoalPanel_Empty from '../Components/GoalPanel_Empty';
+import GoalList from '../Components/GoalList';
 import GoalCalendar from '../Components/GoalCalendar';
 
 
@@ -48,6 +49,8 @@ export default function MoneyGoalsHome() {
         <GoalPanel_Empty/>
 
       </Carousel>
+
+      <GoalList/>
 
       <GoalCalendar/>
 
