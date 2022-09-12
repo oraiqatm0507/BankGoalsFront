@@ -219,16 +219,14 @@ export default function GoalPopup({
                                     !editGoalDuration ?
                                         <div>
                                             <p>Duration:</p>
-                                            <ul>
-                                                <li>Start Date {durationStart}</li>
-                                                <li>End Date   {durationEnd}
+                                            <ul >
+                                                <li className='durList'>Start Date {durationStart}</li>
+                                                <br/>
+                                                <li className='durList'>End Date   {durationEnd}
                                                     <button className="editBtn" onClick={() => handleEdit(3)}><FiEdit /></button>
                                                 </li>
 
                                             </ul>
-
-
-
 
                                         </div>
                                         :
