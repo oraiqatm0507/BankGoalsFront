@@ -8,11 +8,14 @@ import GoalPanel_Main from '../Components/GoalPanel_Main'
 import GoalPanel from '../Components/GoalPanel'
 import GoalPanel_Empty from '../Components/GoalPanel_Empty';
 import GoalCalendar from '../Components/GoalCalendar';
+
 import { useNavigate } from 'react-router-dom';
 import { useQuery, gql } from '@apollo/client';
 
 
-let pdata = { ownerId: "091823812-1298312" }
+import { setGoals } from '../Backend/goalsSlice';
+
+
 
 const GET_GOALS_BY_OWNER = gql`
   query MG_getGoalsByOwner($value: String  ){
@@ -59,6 +62,8 @@ const responsive = {
 
 export default function MoneyGoalsHome() {
   const user = useSelector((state) => state.user.value)
+  const goals = useSelector((state) => state.goals.value)
+  const dispatch = useDispatch();
   let navigate = useNavigate();
 
 
@@ -66,32 +71,45 @@ export default function MoneyGoalsHome() {
     if (!user.loggedIn)
       navigate('/SignIn')
 
+
+
+
   }, [])
   const { loading, error, data } = useQuery(GET_GOALS_BY_OWNER, { "no-cors": true, variables: { value: user.id } });
+
 
   if (loading) return <p>Loading...</p>;
 
   if (error) return <p>Error : {error.message}</p>;
 
   console.log(data);
+  dispatch(setGoals(data.MG_getGoalsByOwner))
 
+
+  function handleGoalPanels() {
+    if (goals.length > 0) {
+
+    }
+  }
   return (
     <div className='MGH_mainContainer'>
       <Carousel className='carouselView' responsive={responsive}>
-        <GoalPanel />
-        <GoalPanel_Main />
-        <GoalPanel_Empty />
-        <GoalPanel_Empty />
+        <GoalPanel_Main checkingBalance={user.accBalance} savingBalance={user.accSavingBalance} />
+        {
+          (goals.length > 0) && goals.map((goal) => {
+            return <GoalPanel goalData={goal} />
+          })
+        }
 
-        <GoalPanel_Empty />
-        <GoalPanel_Empty />
-        <GoalPanel_Empty />
-        <GoalPanel_Empty />
+        {
+          (goals.length < 2) && <GoalPanel_Empty />
+        }
+
         <GoalPanel_Empty />
 
       </Carousel>
 
-      <GoalCalendar />
+      <GoalCalendar allGoals={goals}/>
 
     </div>
 

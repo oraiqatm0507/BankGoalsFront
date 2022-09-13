@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useQuery, gql } from '@apollo/client';
-
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -16,6 +16,7 @@ const GET_USER_INFO = gql`
   }
 `;
 export default function UserLoginQuery({ userEmail, userPassword, cleanUpFunc }) {
+    let navigate = useNavigate();
  
 
     const [userInfo, setUserInfo] = useState({ id: 0, email: userEmail, password: userPassword, accBalance:0 })
@@ -23,7 +24,7 @@ export default function UserLoginQuery({ userEmail, userPassword, cleanUpFunc })
 
     if (loading) console.log('loading....');
 
-    if (error) console.log(error.message);
+
    
     cleanUpFunc();
 

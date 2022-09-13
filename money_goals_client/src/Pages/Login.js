@@ -20,7 +20,9 @@ function Login() {
 
   function signIn(event) {
     event.preventDefault();
-    setLoginBtn(true);
+    //setLoginBtn(true);
+    dispatch(setUser({id: user.id, email: user.email, accBalance: user.accBalance, accSavingBalance:user.accSavingBalance, loggedIn: true}))
+    navigate('/MoneyGoals')
 
   }
 

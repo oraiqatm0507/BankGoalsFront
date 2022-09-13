@@ -46,16 +46,16 @@ export const options = {
 
 const labels = [' Saving', 'Budgeting', 'Payement', 'Investing', 'Stock', 'Crypto'];
 
-export default function GoalPanel_Main() {
-    const [accountBalance, setAccountBalance] = useState(4000000)
-    const [accountSaving, setAccountSaving] = useState(100000000)
+export default function GoalPanel_Main({checkingBalance, savingBalance}) {
+    const [accountBalance, setAccountBalance] = useState(checkingBalance)
+    const [accountSaving, setAccountSaving] = useState(savingBalance)
     const [graphData, setGraphData] = useState(
         {
             labels,
             datasets: [
                 {
                     label: 'Goals',
-                    data: labels.map(() => faker.datatype.number({ min: 0, max: 50 })),
+                    data: labels.map(() => faker.datatype.number({ min: 0, max: 10 })),
                     borderColor: 'rgba(128, 0, 128)',
                     backgroundColor: 'rgba(128, 0, 128, 0.5)',
                 },
@@ -65,10 +65,6 @@ export default function GoalPanel_Main() {
 
 
     )
-
-  
-
-
 
 
 
