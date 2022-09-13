@@ -1,16 +1,26 @@
 import React from 'react'
-
 import '../CSS/Auth.css'
+import UserLoginQuery from '../Backend/UserLoginQuery';
+import { useSelector, useDispatch } from 'react-redux'
+import { setUser, emptyUser } from '../Backend/userSlice'
+
+import { useNavigate } from 'react-router-dom';
+
 
 
 function Login() {
+  let navigate = useNavigate();
 
-  const [email, setEmail] = React.useState('');
-  const [password, setPassword] = React.useState('');
+  const user = useSelector((state) => state.user.value)
+  const dispatch = useDispatch()
 
-  async function signIn(event) {
+  const [email, setEmail] = React.useState('test2@gmail.com');
+  const [password, setPassword] = React.useState('test123');
+  const [loginBtn, setLoginBtn] = React.useState(false)
+
+  function signIn(event) {
     event.preventDefault();
-   
+    setLoginBtn(true);
 
   }
 
@@ -18,11 +28,21 @@ function Login() {
 
   }
 
+  function cancelUserLoginQuery(data){
+    setLoginBtn(false);
+    dispatch(setUser({id: "1", email:'', accBalance: 4000000, loggedIn: true}))
+    navigate('/MoneyGoals')
+
+  }
+
+
   //Realm
   
 
   return (
+
     <div>
+      {loginBtn && <UserLoginQuery userEmail={email} userPassword={password} cleanUpFunc={cancelUserLoginQuery} />}
       <div className='banner' />
       <form className='authContainerForm'>
         <h2 className='formTitle'>Login</h2>
