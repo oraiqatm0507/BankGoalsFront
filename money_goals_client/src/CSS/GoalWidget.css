@@ -1,8 +1,25 @@
-.widgetMain {
+.widgetGoal {
+    margin-top: 10px;
     margin-left: 100px;
     margin-right: 100px;
+    border-width: 1px;
+    border-radius: 20px;
+    border-style: solid;
     line-height: 1;
     text-align: center;
+}
+
+.widgetAchieve {
+    margin-top: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-width: 1px;
+    border-radius: 20px;
+    border-style: solid;
+    line-height: 1;
+    text-align: center;
+    background-color: goldenrod;
+    color: #36013f;;
 }
 
 .timeRemaining {

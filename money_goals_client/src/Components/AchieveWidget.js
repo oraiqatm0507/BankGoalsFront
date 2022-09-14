@@ -18,7 +18,7 @@ export default function GoalWidget({
     const [g_descr, setG_descr] = useState("Get fat stacks before the end of the year.")
     const [g_installmentAmount, setG_installmentAmount] = useState(20000)
     const [g_recursiveLength, setG_recursiveLength] = useState(2)
-    const [g_amountSaved, setG_amountSaved] = useState(190000)
+    const [g_amountSaved, setG_amountSaved] = useState(300000)
     const [currentGoalAmount, setCurrentGoalAmount] = useState(300000)
 
     //Helpers
@@ -96,7 +96,7 @@ export default function GoalWidget({
         
 
     return(
-        <div className='widgetGoal'>
+        <div className='widgetAchieve'>
             <p className="timeRemaining">{checkTimeRemaining()} { checkTimeMeasurement() } Remaining</p>
             <p className="goalTitle">{g_title}</p>
             <p className="goalDescription">{g_descr}</p>

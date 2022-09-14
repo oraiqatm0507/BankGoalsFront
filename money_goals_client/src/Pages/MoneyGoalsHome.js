@@ -6,7 +6,8 @@ import '../CSS/MoneyGoalHome.css'
 import GoalPanel_Main from '../Components/GoalPanel_Main'
 import GoalPanel from '../Components/GoalPanel'
 import GoalPanel_Empty from '../Components/GoalPanel_Empty';
-import GoalList from '../Components/GoalList';
+import GoalWidget from '../Components/GoalWidget.js'
+import AchieveWidget from '../Components/AchieveWidget.js'
 import GoalCalendar from '../Components/GoalCalendar';
 
 
@@ -50,7 +51,23 @@ export default function MoneyGoalsHome() {
 
       </Carousel>
 
-      <GoalList/>
+      <h5  className='goalHeadings'>Upcoming Goals</h5>
+
+      <Carousel className='carouselView' responsive={responsive}>
+        <GoalWidget/>
+        <GoalWidget/>
+        <GoalWidget/>
+        <GoalWidget/>
+      </Carousel>
+
+      <h5  className='achieveHeadings'>Achievements</h5>
+
+      <Carousel className='carouselView' responsive={responsive}>
+        <AchieveWidget/>
+        <AchieveWidget/>
+        <AchieveWidget/>
+        <AchieveWidget/>
+      </Carousel>
 
       <GoalCalendar/>
 
