@@ -7,20 +7,17 @@ import ProgressBar from "@ramonak/react-progress-bar";
 
 
 
-export default function GoalPopup({
-    timeRemaining, goalName, goalDescr,
-    installmentAmount, allocateAuto, howOften,
-    startDate, endDate, amountSaved, goalAmount }) {
+export default function GoalPopup({goal, closeModal}){
     //States to hold values coming in through props above ^
-    const [g_title, setG_title] = useState("Make Fat Stacks")
-    const [g_descr, setDescr] = useState("Get Fat Stacks before the end of the year. Something long so that Ic can test soemthings out for sure")
-    const [g_installmentAmount, setInstallMentAmount] = useState(20000);
+    const [g_title, setG_title] = useState(goal.name)
+    const [g_descr, setDescr] = useState(goal.goalMsg)
+    const [g_installmentAmount, setInstallMentAmount] = useState(goal.startingInstallment);
     const [g_recursiveLength, setRecursiveLength] = useState(2);
-    const [durationStart, setDurationStart] = useState("2022-09-12");
-    const [durationEnd, setDurationEnd] = useState("2022-09-17")
-    const [g_goalType, setGoalType] = useState("Saved")
-    const [g_amountSaved, setAmountSaved] = useState(100000)
-    const [currentGoalAmount, setCurrentGoalAmount] = useState(300000)
+    const [durationStart, setDurationStart] = useState(goal.startDate);
+    const [durationEnd, setDurationEnd] = useState(goal.endDate)
+    const [g_goalType, setGoalType] = useState(goal.goalType)
+    const [g_amountSaved, setAmountSaved] = useState(goal.aquiredAmount)
+    const [currentGoalAmount, setCurrentGoalAmount] = useState(goal.goalBalance)
 
     //States to manage what to display
     const [editGoalTitle, setEditGoalTitle] = useState(false);
@@ -52,7 +49,7 @@ export default function GoalPopup({
     ]
 
     function onClose() {
-
+        closeModal();
     }
 
     function updateInstallment(val) {
@@ -128,7 +125,7 @@ export default function GoalPopup({
       }
 
     return (
-        <div className='windowMain'>
+        <div className='windowMain' >
             <button className="closeBtn" onClick={onClose}>
                 <FiX />
             </button>
@@ -219,16 +216,14 @@ export default function GoalPopup({
                                     !editGoalDuration ?
                                         <div>
                                             <p>Duration:</p>
-                                            <ul>
-                                                <li>Start Date {durationStart}</li>
-                                                <li>End Date   {durationEnd}
+                                            <ul >
+                                                <li className='durList'>Start Date {durationStart}</li>
+                                                <br/>
+                                                <li className='durList'>End Date   {durationEnd}
                                                     <button className="editBtn" onClick={() => handleEdit(3)}><FiEdit /></button>
                                                 </li>
 
                                             </ul>
-
-
-
 
                                         </div>
                                         :

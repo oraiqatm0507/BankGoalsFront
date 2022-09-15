@@ -2,15 +2,23 @@ import React, {useState} from 'react'
 import '../CSS/GoalPanel.css'
 import ProgressBar from "@ramonak/react-progress-bar";
 import { FiInfo } from 'react-icons/fi';
+import GoalPopup from './GoalPopup';
+import Popup from 'reactjs-popup';
 
-export default function GoalPanel() {
-    const [goalTitle, setGoalTitle] = useState("Make Fat Stacks")
-    const [goalType, setGoalType] = useState("Saved")
-    const [goalDescr, setGoalDescr] = useState("Make alot of money that would be able to satisfy my greed. lsjdkjfjlksdjlkfjklsajdflkjalksdjfkljksaldjflkjsadlkfjsalkdjfkljasdkljfkljsadfkljasfdkl If it doesnt just keep going.")
-    const [durationStart, setDurationStart] = useState("2022-09-12")
-    const [durationEnd, setDurationEnd] = useState("2022-10-12")
-    const [progressAmount, setProgressAmount] = useState(190000)
-    const [goalAmount, setGoalAmount] = useState(300000)
+
+
+
+
+
+export default function GoalPanel({goalData}) {
+    
+    const [goalTitle, setGoalTitle] = useState(goalData.name)
+    const [goalType, setGoalType] = useState(goalData.goalType)
+    const [goalDescr, setGoalDescr] = useState(goalData.goalMsg)
+    const [durationStart, setDurationStart] = useState(goalData.startDate)
+    const [durationEnd, setDurationEnd] = useState(goalData.endDate)
+    const [progressAmount, setProgressAmount] = useState(goalData.aquiredAmount)
+    const [goalAmount, setGoalAmount] = useState(goalData.goalBalance)
 
 
     function formatMoney(money) {
@@ -65,9 +73,18 @@ export default function GoalPanel() {
             </div>
             <div style={{marginBottom:60}} />
 
-            <button className="goalInfo" onClick={handleGoalPopup}>
-                <FiInfo size={30} />
-            </button>
+            <Popup trigger={<button className="goalInfo" onClick={handleGoalPopup}>
+                <FiInfo size={30}/>
+            </button>}
+            modal
+            nested
+        >
+            {close =>
+                <GoalPopup closeModal={close} goal={goalData} />
+            }
+          
+        </Popup>
+            
         </div>
     )
 }

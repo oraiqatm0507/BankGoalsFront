@@ -63,9 +63,11 @@
 }
 
 .listContainer {
-    flex: 50%;
+  
     padding-left: 10px;
 }
+
+
 
 .Installments div {
     margin-top: 5px;
@@ -91,11 +93,16 @@
 
     margin-top: 5px;
 }
+.duration{
+    display: block;
+}
 
 .duration ul {
     list-style-type: none;
 }
-
+.durList{
+    display: block;
+}
 .calendar {
     flex: 50%;
     margin-top: 5%;
