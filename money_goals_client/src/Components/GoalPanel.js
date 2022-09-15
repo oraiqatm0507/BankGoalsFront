@@ -2,6 +2,13 @@ import React, {useState} from 'react'
 import '../CSS/GoalPanel.css'
 import ProgressBar from "@ramonak/react-progress-bar";
 import { FiInfo } from 'react-icons/fi';
+import GoalPopup from './GoalPopup';
+import Popup from 'reactjs-popup';
+
+
+
+
+
 
 export default function GoalPanel({goalData}) {
     
@@ -66,9 +73,18 @@ export default function GoalPanel({goalData}) {
             </div>
             <div style={{marginBottom:60}} />
 
-            <button className="goalInfo" onClick={handleGoalPopup}>
-                <FiInfo size={30} />
-            </button>
+            <Popup trigger={<button className="goalInfo" onClick={handleGoalPopup}>
+                <FiInfo size={30}/>
+            </button>}
+            modal
+            nested
+        >
+            {close =>
+                <GoalPopup closeModal={close} goal={goalData} />
+            }
+          
+        </Popup>
+            
         </div>
     )
 }

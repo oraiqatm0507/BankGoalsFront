@@ -9,7 +9,7 @@ import MoneyGoalsHome from './Pages/MoneyGoalsHome';
 import Login from './Pages/Login';
 import NavBar from './Components/NavBar';
 import CreateAccount from './Pages/CreateAccount';
-
+import CreateGoal from './Nelda/CreatingGoals.js'
 
 
 function App() {
@@ -22,6 +22,8 @@ function App() {
       <Route path="/MoneyGoals" element={<MoneyGoalsHome />} />
       <Route path="/CreateAccount" element={<CreateAccount />} />
       <Route path="/Trigger" element={<TempPage />} />
+      <Route path="/CreateGoal" element={<CreateGoal />} />
+
 
     </Routes>
   </Router>

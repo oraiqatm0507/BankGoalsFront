@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import '../CSS/GoalPanel.css'
-
+import { useNavigate } from 'react-router-dom';
 
 import {
     Chart as ChartJS,
@@ -47,6 +47,7 @@ export const options = {
 const labels = [' Saving', 'Budgeting', 'Payement', 'Investing', 'Stock', 'Crypto'];
 
 export default function GoalPanel_Main({checkingBalance, savingBalance}) {
+    let navigate = useNavigate();
     const [accountBalance, setAccountBalance] = useState(checkingBalance)
     const [accountSaving, setAccountSaving] = useState(savingBalance)
     const [graphData, setGraphData] = useState(
@@ -101,7 +102,7 @@ export default function GoalPanel_Main({checkingBalance, savingBalance}) {
             </div>
             <div style={{ marginBottom: 10 }} />
 
-            <button className='createGoalBtn'>Create New Goal</button>
+            <button className='createGoalBtn'  onClick={() =>{navigate('/CreateGoal')} } >Create New Goal</button>
         </div>
     )
 }

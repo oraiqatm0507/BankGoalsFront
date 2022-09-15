@@ -1,0 +1,89 @@
+
+/*HR for the Creating Goals page 
+  */
+  .mainCard{
+    width: '70%';
+    background-color: "rgba(44, 149, 236, 0.151)";
+    margin: 0 15%;
+  }
+
+
+
+
+  .CreatinGoalsHR{
+    height: 50px;
+    border: 0;
+    box-shadow: inset 0 19px 10px -10px rgba(1, 57, 106, 0.8);
+    -webkit-border-radius: px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 15px;
+    border-radius: 12px;
+    padding-top: 0px;
+
+}
+
+/* the Styling for 
+the GoalsContainer page */
+.goalsdivPartent{
+  display: block;
+  width: 100%;
+  padding: 1%;
+ 
+}
+
+.goalsFrom{
+  font-size: medium;
+ background-color: aliceblue;
+ background-color: blue;
+ width: 80%;
+
+}
+.goalsLabelStyling{
+  display: flex;
+  height: 100%;
+}
+.goalsdivChild{
+  height: 3%;
+  width: 80%;
+  background-color: aqua;
+}
+/* the styling for GoalsTypes page 
+ */
+ .mainContainerParentDiv{
+  display: flex;
+
+ }
+ .mainContainerChilDivDateInput{
+  display: inline-block;
+  padding-right: 5%;
+ }
+ .mainContainerul{
+  list-style: none;
+ }
+ .mainContainerChildDivSelect{
+ display: flex;
+ }
+ .mainContainerSelect{
+  display: inline-block;
+  margin-top: 1%;
+  margin-right: 50%;
+  margin-left: 20%;
+  height: 20px;
+  padding-left: 10%;
+  font-weight: bold;
+  background-color:rgb(245, 254, 253) ;
+ 
+}
+
+.N_choseAccount{
+    margin-bottom: 30px;
+}
+
+.N_choseAccount text{
+
+  margin-right: 10px;
+}
+
+.N_choseAccount select{
+  padding: 3px;
+}
