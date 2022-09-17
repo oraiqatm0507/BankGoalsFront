@@ -1,0 +1,4 @@
+npm i 
+"react-big-calendar" react-calendar react-chartjs-2 react-icons react-multi-carousel react-redux
+"react-router-dom" react-scripts reactjs-popup @emotion/react @emotion/styled @mui/material
+"@mui/system" @ramonak/react-progress-bar @reduxjs/toolkit "chart.js"
