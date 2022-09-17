@@ -7,6 +7,7 @@ import CreateAccountQuery from '../Backend/CreateAccountQuery';
 
 
 
+
 function CreateAccount() {
   let navigate = useNavigate();
 

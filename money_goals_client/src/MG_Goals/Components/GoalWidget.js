@@ -6,20 +6,17 @@ import ProgressBar from "@ramonak/react-progress-bar";
 import moment from 'moment';
 
 
-export default function GoalWidget({
-    timeRemaining, goalName, goalDescr,
-    installmentAmount, allocateAuto, howOften,
-    startDate, endDate, amountSaved, goalAmount }){
+export default function GoalWidget({goal}){
     //States to hold the values from the props above.
-    const [g_goalType, setG_goalType] = useState("SAVINGS")
-    const [durationStart, setDurationStart] =  useState("2022-09-12")
-    const [durationEnd, setDurationEnd] = useState(new Date(2022, 10, 11))
-    const [g_title, setG_title] = useState("Make Fat Stacks")
-    const [g_descr, setG_descr] = useState("Get fat stacks before the end of the year.")
-    const [g_installmentAmount, setG_installmentAmount] = useState(20000)
+    const [g_goalType, setG_goalType] = useState(goal.goalType)
+    const [durationStart, setDurationStart] =  useState(goal.startDate)
+    const [durationEnd, setDurationEnd] = useState(new Date(goal.endDate))
+    const [g_title, setG_title] = useState(goal.name)
+    const [g_descr, setG_descr] = useState(goal.goalMsg)
+    const [g_installmentAmount, setG_installmentAmount] = useState(goal.startingInstallment)
     const [g_recursiveLength, setG_recursiveLength] = useState(2)
-    const [g_amountSaved, setG_amountSaved] = useState(190000)
-    const [currentGoalAmount, setCurrentGoalAmount] = useState(300000)
+    const [g_amountSaved, setG_amountSaved] = useState(goal.aquiredAmount)
+    const [currentGoalAmount, setCurrentGoalAmount] = useState(goal.goalBalance)
 
     //Helpers
     const [currentDate, setCurrentDate] = useState(new Date());

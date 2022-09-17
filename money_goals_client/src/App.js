@@ -3,13 +3,13 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 
-import TempPage from './Pages/TempPage';
-import GoalCalendar from './Components/GoalCalendar';
-import MoneyGoalsHome from './Pages/MoneyGoalsHome';
-import Login from './Pages/Login';
-import NavBar from './Components/NavBar';
-import CreateAccount from './Pages/CreateAccount';
-import CreateGoal from './Nelda/CreatingGoals.js'
+import TempPage from './MG_Goals/Pages/TempPage';
+import GoalCalendar from './MG_Goals/Components/GoalCalendar';
+import MoneyGoalsHome from './MG_Goals/Pages/MoneyGoalsHome';
+import Login from './MG_Goals/Pages/Login';
+import NavBar from './MG_Goals/Components/NavBar';
+import CreateAccount from './MG_Goals/Pages/CreateAccount';
+import CreateGoal from './MG_Goals/Nelda/CreatingGoals.js'
 
 
 function App() {

@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { ApolloClient, InMemoryCache, ApolloProvider, HttpLink, gql } from '@apollo/client';
 import { WebSocketLink } from 'apollo-link-ws';
 import { Provider } from 'react-redux';
-import store from './Backend/store';
+import store from './MG_Goals/Backend/store';
 
 const httpLink = new HttpLink({
   uri: `http://localhost:8080/graphql`,
