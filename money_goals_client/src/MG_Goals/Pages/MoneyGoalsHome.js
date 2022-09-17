@@ -33,7 +33,7 @@ const defaultGoals = [{
   goalColor: "#FFFFF",
   estimatedDurationOfGoal: "3 months",
   preferredGoalDuration: "3 months",
-  aquiredAmount: 10000,
+  aquiredAmount: 450000,
   goalType: "SAVING",
   accountType: "CHECKING",
   isCompleted: false,
@@ -191,8 +191,9 @@ export default function MoneyGoalsHome() {
   const dispatch = useDispatch();
   let navigate = useNavigate();
 
-
+  const [allGoals, setAllGoals] = useState(defaultGoals)
   useEffect(() => {
+
     if (!user.loggedIn)
       navigate('/SignIn')
 
@@ -223,14 +224,14 @@ export default function MoneyGoalsHome() {
       <Carousel className='carouselView' responsive={responsive}>
         <GoalPanel_Main checkingBalance={user.accBalance} savingBalance={user.accSavingBalance} />
         {
-          (goals.length > 0) && goals.map((goal) => {
+          (allGoals.length > 0) && allGoals.map((goal) => {
 
             return <GoalPanel goalData={goal} />
           })
         }
 
         {
-          (goals.length < 2) && <GoalPanel_Empty />
+          (allGoals.length < 2) && <GoalPanel_Empty />
         }
 
         <GoalPanel_Empty />
@@ -242,7 +243,7 @@ export default function MoneyGoalsHome() {
 
       <Carousel className='carouselView' responsive={responsive}>
       {
-          (goals.length > 0) && goals.map((goal) => {
+          (allGoals.length > 0) && allGoals.map((goal) => {
 
             return <GoalWidget goal={goal} />
           })
